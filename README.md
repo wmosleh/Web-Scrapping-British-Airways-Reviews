@@ -72,13 +72,13 @@ Web Scraping → Text Normalization → Feature Engineering → PCA / Topic Mode
 ## Results & Visual Insights
 
 ### Sentiment Distribution
+This chart illustrates the distribution of passenger sentiment derived from automated classification of 1,000 Skytrax reviews. The results show a majority of positive feedback, indicating strong overall brand perception and service satisfaction. However, a substantial negative segment highlights key operational and customer service pain points, such as delays, booking issues, and support interactions, which represent high-impact areas for performance improvement and customer retention strategies.
+
 <p align="center">
   <img src="sentiment_distribution.png" width="600"/>
 </p>
 
-- **57% Positive**
-- **42.7% Negative**
-- **0.3% Neutral**
+
 
 ---
 
