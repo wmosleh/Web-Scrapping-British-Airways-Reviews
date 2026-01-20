@@ -72,7 +72,7 @@ Web Scraping → Text Normalization → Feature Engineering → PCA / Topic Mode
 ## Results & Visual Insights
 
 ### Sentiment Distribution
-![Sentiment Distribution](docs/sentiment_distribution.png)
+![Sentiment Distribution](C:\Users\WMosleh\Downloads\sentiment_distribution.png)
 
 - **57% Positive**
 - **42.7% Negative**
