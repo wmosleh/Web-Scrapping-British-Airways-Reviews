@@ -18,90 +18,117 @@ The architecture and methods are directly transferable to:
 
 ---
 
+## 📌 Table of Contents
+- [Business Problem](#business-problem)
+- [System Architecture](#system-architecture)
+- [Pipeline Workflow](#pipeline-workflow)
+- [Key Features](#key-features)
+- [Results & Visual Insights](#results--visual-insights)
+- [Aviation & Enterprise Transferability](#aviation--enterprise-transferability)
+- [Tech Stack](#tech-stack)
+- [How to Run](#how-to-run)
+- [Data & Ethics](#data--ethics)
+- [What I’d Improve Next](#what-id-improve-next)
+- [Contact](#contact)
+
+---
+
 ## Business Problem
 Airlines receive large volumes of unstructured customer feedback across multiple platforms. Manual review is:
 - Time-consuming
 - Subjective
 - Difficult to scale
 
-Organizations need **automated, auditable analytics pipelines** that convert raw text into **measurable KPIs and strategic insights**.
+Organizations need **automated, auditable analytics pipelines** that convert raw text into **measurable KPIs and strategic insights** for operations, service quality, and executive decision-making.
 
 ---
 
-## Solution
-Built a **modular web scraping and NLP pipeline** that:
-- Extracts public airline reviews from Skytrax
-- Cleans and normalizes raw text
-- Converts text into structured numerical features
-- Applies dimensionality reduction and topic modeling
-- Classifies sentiment at scale
-- Produces interactive visualizations for stakeholder analysis
+## System Architecture
+![Pipeline Architecture](docs/pipeline_architecture.png)
+
+**High-Level Flow:**  
+Web Scraping → Text Normalization → Feature Engineering → PCA / Topic Modeling → Sentiment Classification → Visualization & Reporting
 
 ---
 
 ## Pipeline Workflow
-**Target URLs → Web Scraping → Text Cleaning & Normalization → Feature Engineering (BoW / PCA) → Sentiment Classification → Topic Modeling (LDA) → Visualization & Reporting**
+**Target URLs → HTTP Requests → HTML Parsing → Text Cleaning & Normalization → Feature Engineering (BoW / PCA) → Sentiment Classification → Topic Modeling (LDA) → Visualization & Reporting**
 
 ---
 
 ## Key Features
 - ✅ Automated scraping of **1,000 airline reviews**
-- ✅ Bag of Words frequency analysis (Top 10 keywords)
-- ✅ **Principal Component Analysis (PCA)** with 2 and 3 components
+- ✅ HTML parsing and structured field extraction
+- ✅ Bag of Words frequency analysis (Top Keywords)
+- ✅ **Principal Component Analysis (PCA)** with 2 & 3 components
 - ✅ **Sentiment Analysis** (Positive / Neutral / Negative)
-- ✅ **LDA Topic Modeling** (3 dominant customer experience topics)
+- ✅ **LDA Topic Modeling** (3 dominant experience themes)
 - ✅ **Word Cloud Visualization**
-- ✅ Interactive topic visualization (`lda_vis.html`)
+- ✅ Interactive topic dashboard (`lda_vis.html`)
 - ✅ Analytics-ready DataFrames for BI and reporting
 
 ---
 
-## Results & Insights
+## Results & Visual Insights
 
 ### Sentiment Distribution
+![Sentiment Distribution](docs/sentiment_distribution.png)
+
 - **57% Positive**
 - **42.7% Negative**
 - **0.3% Neutral**
 
+---
+
 ### Recommendation Rate
-- **67.8% did NOT recommend** the airline
-- **32.2% recommended** the airline
+![Recommendation Rate](docs/recommendation_rate.png)
 
-### Top Frequent Words
-`flight`, `ba`, `seat`, `service`, `time`, `hour`, `food`, `crew`, `fly`, `good`  
-➡ Indicates strong focus on **experience, staff, and onboard service**
+- **67.8% did NOT recommend**
+- **32.2% recommended**
 
 ---
 
-## Dimensionality Reduction (PCA)
+### Word Frequency Analysis
+![Word Cloud](docs/wordcloud.png)
 
-### Top Features — PC1
-`flight`, `ba`, `get`, `hour`, `tell`, `would`, `book`, `call`, `day`, `could`  
-➡ Reflects **booking, time, and customer communication themes**
-
-### Top Features — PC2
-`seat`, `class`, `business`, `good`, `cabin`, `food`, `crew`, `passenger`  
-➡ Represents **service quality and product experience**
-
-### Top Features — PC3
-`customer`, `airline`, `british`, `call`, `crew`, `flight`  
-➡ Highlights **brand perception and customer service interactions**
+Top recurring terms indicate strong focus on:
+- Flight experience and delays
+- Staff and service quality
+- Cabin and onboard product
 
 ---
 
-## Topic Modeling (LDA Results)
+### Dimensionality Reduction (PCA)
+![PCA Components](docs/pca_components.png)
 
-### Topic 1 — Operations & Boarding
-`flight`, `staff`, `time`, `crew`, `delay`, `check`, `gate`, `boarding`
+**PC1 — Booking & Time Management**  
+`flight, ba, get, hour, tell, would, book, call, day`
 
-### Topic 2 — Customer Service & Disruptions
-`customer`, `airline`, `call`, `cancel`, `tell`, `hour`
+**PC2 — Cabin & Service Experience**  
+`seat, class, business, good, cabin, food, crew, passenger`
 
-### Topic 3 — Cabin & Product Experience
-`seat`, `class`, `food`, `business`, `service`, `cabin`, `crew`
+**PC3 — Brand & Customer Service**  
+`customer, airline, british, call, crew, flight`
 
-📊 Interactive Visualization:  
-`lda_vis.html`
+---
+
+### Topic Modeling (LDA)
+![LDA Topics](docs/lda_topics.png)
+
+**Topic 1 — Operations & Boarding**  
+`flight, staff, time, delay, gate, boarding`
+
+**Topic 2 — Customer Service & Disruptions**  
+`customer, call, cancel, hour, airline`
+
+**Topic 3 — Cabin & Product Experience**  
+`seat, class, food, service, crew`
+
+---
+
+### Interactive Visualization
+🔗 **[Open LDA Interactive Dashboard](docs/lda_vis.html)**  
+Explore topic distributions and term relevance dynamically.
 
 ---
 
