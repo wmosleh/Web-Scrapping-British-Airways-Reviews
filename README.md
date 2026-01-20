@@ -73,7 +73,7 @@ Web Scraping → Text Normalization → Feature Engineering → PCA / Topic Mode
 
 ### Sentiment Distribution
 <p align="center">
-  <img src="docs/sentiment_distribution.png" width="600"/>
+  <img src="Web-Scrapping-British-Airways-Reviews/sentiment_distribution.png" width="600"/>
 </p>
 
 - **57% Positive**
