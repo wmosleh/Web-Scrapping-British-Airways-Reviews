@@ -104,7 +104,6 @@ Top recurring terms indicate strong focus on:
 ---
 
 ### Dimensionality Reduction (PCA)
-![PCA Components](docs/pca_components.png)
 
 **PC1 — Booking & Time Management**  
 `flight, ba, get, hour, tell, would, book, call, day`
@@ -114,7 +113,9 @@ Top recurring terms indicate strong focus on:
 
 **PC3 — Brand & Customer Service**  
 `customer, airline, british, call, crew, flight`
-
+<p align="center">
+  <img src="PCA.png" width="600"/>
+</p>
 ---
 
 ### Topic Modeling (LDA)
