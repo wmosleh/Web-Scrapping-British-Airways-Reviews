@@ -91,7 +91,7 @@ This chart illustrates the distribution of passenger sentiment derived from auto
 ---
 
 ### Word Frequency Analysis
-![Word Cloud](docs/wordcloud.png)
+![Word Cloud](wordcloud.png)
 
 Top recurring terms indicate strong focus on:
 - Flight experience and delays
