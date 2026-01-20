@@ -91,7 +91,10 @@ This chart illustrates the distribution of passenger sentiment derived from auto
 ---
 
 ### Word Frequency Analysis
-![Word Cloud](wordcloud.png)
+This word cloud displays the most frequently occurring, normalized terms extracted from 1,000 Skytrax customer reviews after text cleaning, stopword removal, and lemmatization. The size of each word is proportional to its frequency, highlighting which aspects of the passenger journey dominate customer attention and feedback. 
+<p align="center">
+  <img src="wordcloud" width="600"/>
+</p>
 
 Top recurring terms indicate strong focus on:
 - Flight experience and delays
